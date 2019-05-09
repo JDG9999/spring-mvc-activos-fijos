@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * @author Juan David
+ * Entidad para la base de datos. Maneja las áreas.
+ */
 @Entity
 @Table(name="area")
 public class Area {

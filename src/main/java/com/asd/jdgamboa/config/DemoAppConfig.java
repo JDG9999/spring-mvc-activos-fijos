@@ -24,6 +24,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+/**
+ * @author Juan David
+ * Configura la aplicación 
+ */
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
@@ -38,6 +42,10 @@ public class DemoAppConfig implements WebMvcConfigurer {
 	
 	// define a bean for ViewResolver
 
+	/**
+	 * Genera la conexión con la base de datos
+	 * @return conexión con los parametros de pool establecidos
+	 */
 	@Bean
 	public DataSource myDataSource() {
 		
@@ -52,7 +60,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 			throw new RuntimeException(exc);
 		}
 		
-		// for sanity's sake, let's log url and user ... just to make sure we are reading the data
+		// log url and user ... just to make sure we are reading the data
 		logger.info("jdbc.url=" + env.getProperty("jdbc.url"));
 		logger.info("jdbc.user=" + env.getProperty("jdbc.user"));
 		
@@ -70,6 +78,9 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		return myDataSource;
 	}
 	
+	/**
+	 * @return Propiedades definidas en el proyecto para uso de Hibernate
+	 */
 	private Properties getHibernateProperties() {
 
 		// set hibernate properties
@@ -85,6 +96,10 @@ public class DemoAppConfig implements WebMvcConfigurer {
 	// need a helper method 
 	// read environment property and convert to int
 	
+	/**
+	 * @param propName propiedad que se desea converit
+	 * @return propiedad convertida en entero
+	 */
 	private int getIntProperty(String propName) {
 		
 		String propVal = env.getProperty(propName);
@@ -95,6 +110,10 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		return intPropVal;
 	}	
 	
+	/**
+	 * Crea y retorna el sessionFactory para uso en Hibernate
+	 * @return sessionFactory (objeto que crea sesiones que permiten interactuar con la BD)
+	 */
 	@Bean
 	public LocalSessionFactoryBean sessionFactory(){
 		
@@ -109,6 +128,11 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		return sessionFactory;
 	}
 	
+	/**
+	 * Crea un Transaction Manager
+	 * @param sessionFactory
+	 * @return Transaction manager para Hibernate
+	 */
 	@Bean
 	@Autowired
 	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {

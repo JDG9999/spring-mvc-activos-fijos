@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * @author Juan David
+ * Entidad para la base de datos. Maneja los empleados.
+ */
 @Entity
 @Table(name="empleado")
 public class Empleado {

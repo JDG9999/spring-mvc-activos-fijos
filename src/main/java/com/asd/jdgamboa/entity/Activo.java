@@ -12,6 +12,10 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author Juan David
+ * Entidad para la base de datos. Maneja los activos fijos de la compañía.
+ */
 @Entity
 @Table(name="activo")
 public class Activo {

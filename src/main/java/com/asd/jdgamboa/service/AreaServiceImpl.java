@@ -13,6 +13,9 @@ import com.asd.jdgamboa.entity.Area;
 public class AreaServiceImpl implements AreaService {
 
 	// need to inject customer dao
+	/**
+	 * DAO del objeto a manipular, en este caso "Area"
+	 */
 	@Autowired
 	private AreaDAO areaDAO;
 	

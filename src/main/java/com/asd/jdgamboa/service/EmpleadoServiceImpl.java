@@ -14,6 +14,9 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
 	// need to inject customer dao
 	@Autowired
+	/**
+	 * DAO del objeto a manipular, en este caso "Empleado"
+	 */
 	private EmpleadoDAO empleadoDAO;
 	
 	@Override

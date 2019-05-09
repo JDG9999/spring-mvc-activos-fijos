@@ -10,10 +10,17 @@ import org.springframework.transaction.annotation.Transactional;
 import com.asd.jdgamboa.dao.ActivoDAO;
 import com.asd.jdgamboa.entity.Activo;
 
+/**
+ * @author Juan David
+ * 
+ */
 @Service
 public class ActivoServiceImpl implements ActivoService {
 
 	// need to inject customer dao
+	/**
+	 * DAO del objeto a manipular, en este caso "Activo"
+	 */
 	@Autowired
 	private ActivoDAO ActivoDAO;
 	

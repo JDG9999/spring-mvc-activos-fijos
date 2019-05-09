@@ -15,9 +15,9 @@ Los activos se pueden asignar a un área o persona, si es a un área esta se enc
  
 API REST que permite administrar los activos, esta debería permitir: 
  
- -  Buscar por todos los activos. 
- -  Buscar los activos por: tipo, fecha de compra, serial. 
+ - Buscar por todos los activos. 
+ - Buscar los activos por: tipo, fecha de compra, serial. 
  - Crear nuevos activos. 
- -  Actualizar activos. 
- -  Permite cambiar el serial interno y fecha de baja. 
- -  Listar las áreas o personas. 
+ - Actualizar activos. 
+ - Permite cambiar el serial interno y fecha de baja. 
+ - Listar las áreas o personas. 
