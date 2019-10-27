@@ -12,7 +12,7 @@
 		<springframework.version>5.0.6.RELEASE</springframework.version>
 		<hibernate.version>5.4.1.Final</hibernate.version>
 		<mysql.connector.version>5.1.45</mysql.connector.version>
-		<c3po.version>0.9.5.2</c3po.version>
+		<c3po.version>0.9.5.3</c3po.version>
 		<springfox-swagger.version>2.9.2</springfox-swagger.version>
 		<log4j.version>2.11.2</log4j.version>
 
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.5</version>
+			<version>2.9.10</version>
 		</dependency>
 
 		<!-- Hibernate -->

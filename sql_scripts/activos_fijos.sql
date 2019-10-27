@@ -85,13 +85,11 @@ CREATE TABLE `activo` (
   `color` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`serial`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 INSERT INTO `activo` VALUES 
 	('ACT-M001','Mesa x','Mesa...', 'Mueble', 10000, 100, 100, 100, 'Marrón'),
 	('ACT-M002','Silla y','Silla...', 'Mueble', 8000, 120, 60, 60, 'Negro'),
 	('ACT-E001','Laptop z','Laptop...', 'Electrónico', 2000, 40, 50, 40, 'Negro');
 	('ACT-E002','Pantalla z','Pantalla...', 'Electrónico', 5000, 80, 100, 20, 'Negro');
-
 DROP TABLE IF EXISTS `activo_inventario`;
 CREATE TABLE `activo_inventario` (
   `cod_inventario` varchar(20) NOT NULL,
@@ -111,7 +109,6 @@ CREATE TABLE `activo_inventario` (
       CASE WHEN `asignacion_area` IS NULL THEN 0 ELSE 1 END = 1
     )
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 INSERT INTO `activo_inventario` VALUES 
 	('ABC003','ACT-E001', 1500000.00, '2019-01-01', NULL, 'activo', 'HR003', NULL),
 	('DEF123','ACT-E001', 1500000.00, '2019-01-01', '2019-05-01', 'dado de baja', 'HR001', NULL),
